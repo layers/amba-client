@@ -1,0 +1,51 @@
+{
+  "name": "@layers/amba-client",
+  "version": "0.1.0",
+  "description": "amba JavaScript SDK for end-user apps (auth, collections, storage, AI, push, events).",
+  "license": "Apache-2.0",
+  "engines": {
+    "node": ">=22"
+  },
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    },
+    "./codegen": {
+      "import": "./dist/codegen/index.js",
+      "types": "./dist/codegen/index.d.ts"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "tsdown",
+    "dev": "tsdown --watch",
+    "typecheck": "tsc --noEmit",
+    "clean": "rm -rf dist"
+  },
+  "dependencies": {
+    "@layers/amba-functions": "^0.1.0",
+    "@layers/amba-shared": "^0.1.0"
+  },
+  "devDependencies": {
+    "tsdown": "^0.12.5",
+    "typescript": "^5.8.3"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/layers/amba-client.git"
+  },
+  "bugs": {
+    "url": "https://github.com/layers/amba-client/issues"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
